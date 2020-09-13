@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		776DB28D250E371A001F67B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB28C250E371A001F67B2 /* AppDelegate.swift */; };
-		776DB291250E371A001F67B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB290250E371A001F67B2 /* ViewController.swift */; };
 		776DB296250E371D001F67B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776DB295250E371D001F67B2 /* Assets.xcassets */; };
 		776DB299250E371D001F67B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776DB297250E371D001F67B2 /* LaunchScreen.storyboard */; };
 		776DB2A4250E371D001F67B2 /* MyChessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2A3250E371D001F67B2 /* MyChessAppTests.swift */; };
+		776DB2B0250E7F02001F67B2 /* ChessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2AE250E7F02001F67B2 /* ChessTableViewController.swift */; };
+		776DB2B1250E7F02001F67B2 /* ChessTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776DB2AF250E7F02001F67B2 /* ChessTableViewController.xib */; };
+		776DB2B5250E8143001F67B2 /* ChessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */; };
+		776DB2B7250E8189001F67B2 /* ChessTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +30,16 @@
 /* Begin PBXFileReference section */
 		776DB289250E371A001F67B2 /* MyChessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776DB28C250E371A001F67B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		776DB290250E371A001F67B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		776DB295250E371D001F67B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776DB298250E371D001F67B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776DB29A250E371D001F67B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		776DB29F250E371D001F67B2 /* MyChessAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyChessAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		776DB2A3250E371D001F67B2 /* MyChessAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChessAppTests.swift; sourceTree = "<group>"; };
 		776DB2A5250E371D001F67B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776DB2AE250E7F02001F67B2 /* ChessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTableViewController.swift; sourceTree = "<group>"; };
+		776DB2AF250E7F02001F67B2 /* ChessTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChessTableViewController.xib; sourceTree = "<group>"; };
+		776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTableViewCell.swift; sourceTree = "<group>"; };
+		776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTableViewCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				776DB28C250E371A001F67B2 /* AppDelegate.swift */,
-				776DB290250E371A001F67B2 /* ViewController.swift */,
 				776DB295250E371D001F67B2 /* Assets.xcassets */,
 				776DB297250E371D001F67B2 /* LaunchScreen.storyboard */,
 				776DB29A250E371D001F67B2 /* Info.plist */,
+				776DB2B3250E810A001F67B2 /* Cells */,
+				776DB2B2250E7F09001F67B2 /* ChessTableViewController */,
 			);
 			path = MyChessApp;
 			sourceTree = "<group>";
@@ -91,6 +98,24 @@
 				776DB2A5250E371D001F67B2 /* Info.plist */,
 			);
 			path = MyChessAppTests;
+			sourceTree = "<group>";
+		};
+		776DB2B2250E7F09001F67B2 /* ChessTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				776DB2AE250E7F02001F67B2 /* ChessTableViewController.swift */,
+				776DB2AF250E7F02001F67B2 /* ChessTableViewController.xib */,
+			);
+			path = ChessTableViewController;
+			sourceTree = "<group>";
+		};
+		776DB2B3250E810A001F67B2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */,
+				776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				776DB299250E371D001F67B2 /* LaunchScreen.storyboard in Resources */,
+				776DB2B1250E7F02001F67B2 /* ChessTableViewController.xib in Resources */,
 				776DB296250E371D001F67B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +219,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				776DB291250E371A001F67B2 /* ViewController.swift in Sources */,
+				776DB2B0250E7F02001F67B2 /* ChessTableViewController.swift in Sources */,
+				776DB2B5250E8143001F67B2 /* ChessTableViewCell.swift in Sources */,
+				776DB2B7250E8189001F67B2 /* ChessTableViewCellModel.swift in Sources */,
 				776DB28D250E371A001F67B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
