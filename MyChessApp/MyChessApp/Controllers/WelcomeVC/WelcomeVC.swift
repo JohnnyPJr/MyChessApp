@@ -15,12 +15,17 @@ class WelcomeVC: ChessTableViewController, ChessViewModelTextfieldDelegate, Ches
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateCellViewModels()
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        cellViewModels = []
         chessModel = ChessModel.init(size: 0,
                                      sourcePosition: nil,
                                      destinationPosition: nil,
                                      results: nil)
+        updateCellViewModels()
     }
 
     override func setupNavigationBar() {

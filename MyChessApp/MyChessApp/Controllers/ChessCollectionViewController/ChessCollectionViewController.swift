@@ -11,6 +11,8 @@ import UIKit
 class ChessCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var viewPathsButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
 
     private var data: ChessModel
     private var chessService: ChessService
@@ -27,6 +29,8 @@ class ChessCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewPathsButton.isHidden = true
+        resetButton.isHidden = true
         setupCollectionView()
         setupNavigationBar()
     }
@@ -48,6 +52,12 @@ class ChessCollectionViewController: UIViewController {
         collectionView.layer.borderColor = UIColor.black.cgColor
     }
 
+    /// Reset data
+    func resetData() {
+        data.sourcePosition = nil
+        data.destinationPosition = nil
+        data.results = nil
+    }
 }
 
 extension ChessCollectionViewController: UICollectionViewDelegate {
@@ -58,6 +68,7 @@ extension ChessCollectionViewController: UICollectionViewDelegate {
         if data.sourcePosition == nil {
             data.sourcePosition = Node.init(x: indexPath.row, y: indexPath.section)
             chessService.updateData(data: data)
+            resetButton.isHidden = false
             collectionView.reloadData()
         } else if data.destinationPosition == nil &&
             data.destinationPosition != data.sourcePosition {
@@ -66,6 +77,7 @@ extension ChessCollectionViewController: UICollectionViewDelegate {
             if let results = chessService.validateData() {
                 data.results = results
                 collectionView.reloadData()
+                viewPathsButton.isHidden = false
             }
         }
     }

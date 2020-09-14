@@ -33,7 +33,8 @@ class WelcomeCellModel: ChessTableViewCellModel {
         guard let view = cell as? WelcomeCell else {
             return
         }
-
+        
+        view.chessTextfield.text = ""
         view.chessTextfield.delegate = self
         view.doneButton.addTarget(self, action:#selector(handleButtonTap(sender:)), for: .touchUpInside)
     }
