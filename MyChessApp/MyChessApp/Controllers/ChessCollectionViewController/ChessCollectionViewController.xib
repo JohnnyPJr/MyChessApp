@@ -19,25 +19,38 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-jB-UXi">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="2" y="246" width="410" height="414"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Agd-Gz-XSZ">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="414" id="ZS8-W1-30y"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Agd-Gz-XSZ">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a starting position and then a destination:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-Ud-Ay4">
+                    <rect key="frame" x="20" y="136" width="374" height="71"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pfx-jB-UXi" secondAttribute="trailing" id="HbW-0l-xLr"/>
-                <constraint firstItem="Pfx-jB-UXi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="RLk-wa-VxU"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pfx-jB-UXi" secondAttribute="bottom" id="fkk-QW-Q4q"/>
-                <constraint firstItem="Pfx-jB-UXi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hzI-02-j2T"/>
+                <constraint firstItem="Pfx-jB-UXi" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="0aY-SW-M61"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pfx-jB-UXi" secondAttribute="trailing" constant="2" id="Nu4-HU-8Eb"/>
+                <constraint firstItem="Pfx-jB-UXi" firstAttribute="top" secondItem="jkh-Ud-Ay4" secondAttribute="bottom" constant="39" id="TOq-Zq-6b2"/>
+                <constraint firstItem="Pfx-jB-UXi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="2" id="UHl-E3-I55"/>
+                <constraint firstItem="jkh-Ud-Ay4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="X9k-YM-cLe"/>
+                <constraint firstItem="jkh-Ud-Ay4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="92" id="hcQ-Rs-Mki"/>
+                <constraint firstItem="Pfx-jB-UXi" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="njQ-iI-30E"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jkh-Ud-Ay4" secondAttribute="trailing" constant="20" id="x9V-hx-gLE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
 </document>

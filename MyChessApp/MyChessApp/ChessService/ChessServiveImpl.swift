@@ -46,12 +46,21 @@ public protocol ChessService {
 
 public class ChessServiceImpl: NSObject, ChessService {
 
-    var data: ChessModel?
+    var data: ChessModel
+
+    init(data: ChessModel) {
+        self.data = data
+        super.init()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     public func shouldShowKnightImage(at indexPath: IndexPath) -> Bool {
         var isHidden = true
-        if data?.sourcePosition?.x == indexPath.row &&
-            data?.sourcePosition?.y == indexPath.section {
+        if data.sourcePosition?.x == indexPath.row &&
+            data.sourcePosition?.y == indexPath.section {
             isHidden = false
         }
         return isHidden
@@ -73,11 +82,11 @@ public class ChessServiceImpl: NSObject, ChessService {
             }
         }
 
-        if data?.sourcePosition?.x == indexPath.row &&
-            data?.sourcePosition?.y == indexPath.section {
+        if data.sourcePosition?.x == indexPath.row &&
+            data.sourcePosition?.y == indexPath.section {
             color = .green
-        } else if data?.destinationPosition?.x == indexPath.row &&
-            data?.destinationPosition?.y == indexPath.section {
+        } else if data.destinationPosition?.x == indexPath.row &&
+            data.destinationPosition?.y == indexPath.section {
             color = .green
         }
         return color
@@ -99,11 +108,11 @@ public class ChessServiceImpl: NSObject, ChessService {
             }
         }
 
-        if data?.sourcePosition?.x == indexPath.row &&
-            data?.sourcePosition?.y == indexPath.section {
+        if data.sourcePosition?.x == indexPath.row &&
+            data.sourcePosition?.y == indexPath.section {
             color = .black
-        } else if data?.destinationPosition?.x == indexPath.row &&
-            data?.destinationPosition?.y == indexPath.section {
+        } else if data.destinationPosition?.x == indexPath.row &&
+            data.destinationPosition?.y == indexPath.section {
             color = .black
         }
         return color
@@ -214,7 +223,7 @@ public class ChessServiceImpl: NSObject, ChessService {
     /// - sizeOfChess: the size of the chess
        fileprivate func getAllIndexPaths() -> [IndexPath] {
            var tempresult:[IndexPath] = []
-           if let allResults = data?.results {
+           if let allResults = data.results {
                for var result in allResults {
                    tempresult += result.getIndexpathsOfNode(availablePaths: result.availablePaths)
                }
