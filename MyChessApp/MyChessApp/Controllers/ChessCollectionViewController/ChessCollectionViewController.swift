@@ -55,7 +55,19 @@ extension ChessCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
 
-//
+        if data.sourcePosition == nil {
+            data.sourcePosition = Node.init(x: indexPath.row, y: indexPath.section)
+            chessService.updateData(data: data)
+            collectionView.reloadData()
+        } else if data.destinationPosition == nil &&
+            data.destinationPosition != data.sourcePosition {
+            data.destinationPosition = Node.init(x: indexPath.row, y: indexPath.section)
+            chessService.updateData(data: data)
+            if let results = chessService.validateData() {
+                data.results = results
+                collectionView.reloadData()
+            }
+        }
     }
 }
 

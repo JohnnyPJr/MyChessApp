@@ -29,8 +29,11 @@ public protocol ChessService {
     /// - Returns: the colour
     func getTextColorForCell(at indexPath: IndexPath) -> UIColor
 
-    /// Shares an account
-    func validateData()
+    /// Validates the data
+    func validateData() -> [ChessPathsResultData]?
+
+    /// updates the data
+    func updateData(data: ChessModel)
 
     /// Called to return All Paths for selected Nodes
     ///
@@ -55,6 +58,10 @@ public class ChessServiceImpl: NSObject, ChessService {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public func updateData(data: ChessModel) {
+        self.data = data
     }
 
     public func shouldShowKnightImage(at indexPath: IndexPath) -> Bool {
@@ -118,8 +125,15 @@ public class ChessServiceImpl: NSObject, ChessService {
         return color
     }
 
-    public func validateData() {
+    public func validateData() -> [ChessPathsResultData]? {
 
+        let results = getAvailablePaths(startingNode: data.sourcePosition!,
+                                                     destinationNode: data.destinationPosition!,
+                                                     sizeOfChess: data.size!)
+        if results.count > 0 {
+            return results
+        }
+        return nil
     }
 
     public func getAvailablePaths(startingNode src: Node, destinationNode dest: Node, sizeOfChess size: Int) -> [ChessPathsResultData] {
