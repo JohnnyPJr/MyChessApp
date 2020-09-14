@@ -61,6 +61,24 @@ class ChessCollectionViewController: UIViewController {
         data.results = nil
     }
 
+    /// Reset data
+    private func showNoPathError() {
+        let alert = UIAlertController(title: "Chess",
+                                      message: "It looks like there are no paths for the chosen destination.\n Try again",
+                                      preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Reset",
+                                        style: .default,
+                                        handler: { [weak self] _ in
+                                            guard let strongSelf = self else { return }
+
+                                            strongSelf.resetData()
+                                            strongSelf.collectionView.reloadData()
+        })
+
+        alert.addAction(alertAction)
+        self.present(alert, animated: true)
+    }
+
     @IBAction func viewPathsPressed(_ sender: Any) {
     }
 
@@ -84,10 +102,13 @@ extension ChessCollectionViewController: UICollectionViewDelegate {
             data.destinationPosition != data.sourcePosition {
             data.destinationPosition = Node.init(x: indexPath.row, y: indexPath.section)
             chessService.updateData(data: data)
-            if let results = chessService.validateData() {
+            if let results = chessService.validateData(),
+                results.count > 0 {
                 data.results = results
                 collectionView.reloadData()
                 viewPathsButton.isHidden = false
+            } else {
+                showNoPathError()
             }
         }
     }
