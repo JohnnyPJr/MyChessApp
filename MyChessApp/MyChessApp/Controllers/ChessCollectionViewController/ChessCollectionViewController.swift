@@ -53,10 +53,20 @@ class ChessCollectionViewController: UIViewController {
     }
 
     /// Reset data
-    func resetData() {
+    private func resetData() {
+        resetButton.isHidden = true
+        viewPathsButton.isHidden = true
         data.sourcePosition = nil
         data.destinationPosition = nil
         data.results = nil
+    }
+
+    @IBAction func viewPathsPressed(_ sender: Any) {
+    }
+
+    @IBAction func resetButtonPressed(_ sender: Any) {
+        resetData()
+        collectionView.reloadData()
     }
 }
 
