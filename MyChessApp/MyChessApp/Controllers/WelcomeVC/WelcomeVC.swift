@@ -41,11 +41,18 @@ class WelcomeVC: ChessTableViewController, ChessViewModelTextfieldDelegate, Ches
     // MARK: - ChessViewModelButtonDelegate Delegate
     func didTappedButton(_ sender: UIButton, cellModelIdentifier: String) {
         if cellModelIdentifier == "WELCOME_CELL" {
-            if inputsAreValid() == true {
-                let vc = ChessCollectionViewController.init(nibName: "ChessCollectionViewController",
-                                                            bundle: Bundle.main)
-
+            if inputsAreValid() == true,
+                let data = chessModel {
+                let vc = ChessCollectionViewController.init(data: data)
                 self.navigationController?.pushViewController(vc, animated: false)
+            } else {
+                let alert = UIAlertController(title: self.appDisplayName(),
+                                              message: "Something Went Wrong. \nTry Again!",
+                                              preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in })
+                alert.addAction(alertAction)
+                self.present(alert, animated: true)
+
             }
         }
     }

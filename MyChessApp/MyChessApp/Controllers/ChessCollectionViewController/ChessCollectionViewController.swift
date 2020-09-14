@@ -11,7 +11,19 @@ import UIKit
 class ChessCollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
+    private var data: ChessModel
+
+
+    init(data: ChessModel) {
+        self.data = data
+        super.init(nibName: "ChessCollectionViewController", bundle: Bundle.main)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
