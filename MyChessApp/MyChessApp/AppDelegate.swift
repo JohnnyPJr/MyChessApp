@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let navigationController = UINavigationController.init(rootViewController: ChessTableViewController.init(nibName: "ChessTableViewController", bundle: Bundle.main))
+        let navigationController = UINavigationController.init(rootViewController: WelcomeVC.init(nibName: "ChessTableViewController", bundle: Bundle.main))
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
 

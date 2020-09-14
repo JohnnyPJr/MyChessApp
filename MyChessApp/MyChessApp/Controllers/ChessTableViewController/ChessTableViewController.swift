@@ -22,6 +22,8 @@ class ChessTableViewController: UIViewController {
             setupNavigationBar()
         }
 
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
         self.tableview.rowHeight = UITableView.automaticDimension;
         self.tableview.separatorColor = UIColor.clear
     }

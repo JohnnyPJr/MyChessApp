@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7753EF6B250E989100CF1E65 /* ChessCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753EF69250E989100CF1E65 /* ChessCollectionViewController.swift */; };
+		7753EF6C250E989100CF1E65 /* ChessCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753EF6A250E989100CF1E65 /* ChessCollectionViewController.xib */; };
+		776154F0250F821500DFC618 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776154EF250F821500DFC618 /* WelcomeVC.swift */; };
 		776DB28D250E371A001F67B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB28C250E371A001F67B2 /* AppDelegate.swift */; };
 		776DB296250E371D001F67B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776DB295250E371D001F67B2 /* Assets.xcassets */; };
 		776DB299250E371D001F67B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776DB297250E371D001F67B2 /* LaunchScreen.storyboard */; };
@@ -15,6 +18,11 @@
 		776DB2B1250E7F02001F67B2 /* ChessTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 776DB2AF250E7F02001F67B2 /* ChessTableViewController.xib */; };
 		776DB2B5250E8143001F67B2 /* ChessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */; };
 		776DB2B7250E8189001F67B2 /* ChessTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */; };
+		779E667E250E9D0E00EE6675 /* ChessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E667C250E9D0E00EE6675 /* ChessCollectionViewCell.swift */; };
+		779E667F250E9D0E00EE6675 /* ChessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779E667D250E9D0E00EE6675 /* ChessCollectionViewCell.xib */; };
+		779E6681250F70DC00EE6675 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E6680250F70DC00EE6675 /* WelcomeCell.swift */; };
+		779E6684250F710E00EE6675 /* WelcomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779E6683250F710E00EE6675 /* WelcomeCell.xib */; };
+		779E6686250F714F00EE6675 /* WelcomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E6685250F714F00EE6675 /* WelcomeCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7753EF69250E989100CF1E65 /* ChessCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCollectionViewController.swift; sourceTree = "<group>"; };
+		7753EF6A250E989100CF1E65 /* ChessCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChessCollectionViewController.xib; sourceTree = "<group>"; };
+		776154EF250F821500DFC618 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		776DB289250E371A001F67B2 /* MyChessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776DB28C250E371A001F67B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		776DB295250E371D001F67B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +51,11 @@
 		776DB2AF250E7F02001F67B2 /* ChessTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChessTableViewController.xib; sourceTree = "<group>"; };
 		776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTableViewCell.swift; sourceTree = "<group>"; };
 		776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessTableViewCellModel.swift; sourceTree = "<group>"; };
+		779E667C250E9D0E00EE6675 /* ChessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChessCollectionViewCell.swift; sourceTree = "<group>"; };
+		779E667D250E9D0E00EE6675 /* ChessCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChessCollectionViewCell.xib; sourceTree = "<group>"; };
+		779E6680250F70DC00EE6675 /* WelcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
+		779E6683250F710E00EE6675 /* WelcomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeCell.xib; sourceTree = "<group>"; };
+		779E6685250F714F00EE6675 /* WelcomeCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7753EF68250E971D00CF1E65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				776154EE250F81E600DFC618 /* WelcomeVC */,
+				776DB2B2250E7F09001F67B2 /* ChessTableViewController */,
+				7753EF6D250E989A00CF1E65 /* ChessCollectionViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7753EF6D250E989A00CF1E65 /* ChessCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7753EF6A250E989100CF1E65 /* ChessCollectionViewController.xib */,
+				7753EF69250E989100CF1E65 /* ChessCollectionViewController.swift */,
+			);
+			path = ChessCollectionViewController;
+			sourceTree = "<group>";
+		};
+		776154EE250F81E600DFC618 /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				776154EF250F821500DFC618 /* WelcomeVC.swift */,
+			);
+			path = WelcomeVC;
+			sourceTree = "<group>";
+		};
 		776DB280250E371A001F67B2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +128,8 @@
 				776DB295250E371D001F67B2 /* Assets.xcassets */,
 				776DB297250E371D001F67B2 /* LaunchScreen.storyboard */,
 				776DB29A250E371D001F67B2 /* Info.plist */,
+				7753EF68250E971D00CF1E65 /* Controllers */,
 				776DB2B3250E810A001F67B2 /* Cells */,
-				776DB2B2250E7F09001F67B2 /* ChessTableViewController */,
 			);
 			path = MyChessApp;
 			sourceTree = "<group>";
@@ -112,10 +155,31 @@
 		776DB2B3250E810A001F67B2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */,
-				776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */,
+				779E667C250E9D0E00EE6675 /* ChessCollectionViewCell.swift */,
+				779E667D250E9D0E00EE6675 /* ChessCollectionViewCell.xib */,
+				779E667B250E9CBA00EE6675 /* TableViewCells */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		779E667B250E9CBA00EE6675 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				776DB2B4250E8143001F67B2 /* ChessTableViewCell.swift */,
+				776DB2B6250E8189001F67B2 /* ChessTableViewCellModel.swift */,
+				779E6682250F70EA00EE6675 /* WelcomeCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		779E6682250F70EA00EE6675 /* WelcomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				779E6680250F70DC00EE6675 /* WelcomeCell.swift */,
+				779E6683250F710E00EE6675 /* WelcomeCell.xib */,
+				779E6685250F714F00EE6675 /* WelcomeCellModel.swift */,
+			);
+			path = WelcomeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779E6684250F710E00EE6675 /* WelcomeCell.xib in Resources */,
 				776DB299250E371D001F67B2 /* LaunchScreen.storyboard in Resources */,
+				779E667F250E9D0E00EE6675 /* ChessCollectionViewCell.xib in Resources */,
+				7753EF6C250E989100CF1E65 /* ChessCollectionViewController.xib in Resources */,
 				776DB2B1250E7F02001F67B2 /* ChessTableViewController.xib in Resources */,
 				776DB296250E371D001F67B2 /* Assets.xcassets in Resources */,
 			);
@@ -219,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779E6681250F70DC00EE6675 /* WelcomeCell.swift in Sources */,
 				776DB2B0250E7F02001F67B2 /* ChessTableViewController.swift in Sources */,
+				779E667E250E9D0E00EE6675 /* ChessCollectionViewCell.swift in Sources */,
 				776DB2B5250E8143001F67B2 /* ChessTableViewCell.swift in Sources */,
+				7753EF6B250E989100CF1E65 /* ChessCollectionViewController.swift in Sources */,
 				776DB2B7250E8189001F67B2 /* ChessTableViewCellModel.swift in Sources */,
+				776154F0250F821500DFC618 /* WelcomeVC.swift in Sources */,
+				779E6686250F714F00EE6675 /* WelcomeCellModel.swift in Sources */,
 				776DB28D250E371A001F67B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
