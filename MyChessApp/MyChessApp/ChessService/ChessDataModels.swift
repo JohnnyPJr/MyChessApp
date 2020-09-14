@@ -141,3 +141,10 @@ struct Queue<T> {
         return self.array.first
     }
 }
+
+extension Int {
+    var associatedCharacter: String? {
+        guard 1...16 ~= self, let unicodeScalar = UnicodeScalar(64 + self) else { return nil }
+        return String(Character(unicodeScalar))
+    }
+}

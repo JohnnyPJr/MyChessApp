@@ -141,8 +141,14 @@ extension ChessCollectionViewController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell",
                                                            for: indexPath) as! ChessCollectionViewCell
-        
-        cell.positionInfo.text = String(indexPath.section) + ":" + String(indexPath.row)
+
+        if let horizontalCharachter = Int(indexPath.row+1).associatedCharacter {
+            let displayText = String(format: "%@ - %@", String(indexPath.section+1), horizontalCharachter)
+            cell.positionInfo.text =  displayText
+        } else {
+            cell.positionInfo.text =  String(indexPath.section) + ":" + String(indexPath.row)
+        }
+
         cell.knightImage.isHidden = chessService.shouldShowKnightImage(at: indexPath)
         cell.backgroundColor = chessService.getBackgroundColor(at: indexPath)
         cell.positionInfo.textColor = chessService.getTextColorForCell(at: indexPath)
