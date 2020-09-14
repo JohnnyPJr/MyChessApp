@@ -10,16 +10,21 @@ import UIKit
 
 class WelcomeVC: ChessTableViewController, ChessViewModelTextfieldDelegate, ChessViewModelButtonDelegate{
 
-//    private var selectionData: LoginSelectionModel = LoginSelectionModel()
     private var cellViewModels: [ChessTableViewCellModel]? = []
+    private var chessModel: ChessModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCellViewModels()
+
+        chessModel = ChessModel.init(size: 0,
+                                     sourcePosition: nil,
+                                     destinationPosition: nil,
+                                     results: nil)
     }
 
     override func setupNavigationBar() {
-        self.navigationItem.title = ""
+        self.navigationItem.title = "Welcome"
     }
 
     private func updateCellViewModels() {
@@ -37,8 +42,10 @@ class WelcomeVC: ChessTableViewController, ChessViewModelTextfieldDelegate, Ches
     func didTappedButton(_ sender: UIButton, cellModelIdentifier: String) {
         if cellModelIdentifier == "WELCOME_CELL" {
             if inputsAreValid() == true {
-//                MBProgressHUD.showAdded(to: view, animated: true)
+                let vc = ChessCollectionViewController.init(nibName: "ChessCollectionViewController",
+                                                            bundle: Bundle.main)
 
+                self.navigationController?.pushViewController(vc, animated: false)
             }
         }
     }
@@ -46,48 +53,45 @@ class WelcomeVC: ChessTableViewController, ChessViewModelTextfieldDelegate, Ches
     // MARK: - Helper Methods
 
     func inputsAreValid() -> Bool {
-//        if selectionData.email?.count ?? 0 > 0,
-//            selectionData.password?.count ?? 0 > 0 {
-//            return true
-//        } else {
-//
-//            let alert = UIAlertController(title: self.appDisplayName(),
-//                                          message: "All fields are mandatory",
-//                                          preferredStyle: .alert)
-//            let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in })
-//            alert.addAction(alertAction)
-//            self.present(alert, animated: true)
-//
-//            return false
-//        }
-        return false
+        if chessModel?.size ?? 0 >= 6 && chessModel?.size ?? 0 <= 16 {
+            return true
+        } else {
+
+            let alert = UIAlertController(title: self.appDisplayName(),
+                                          message: "You should give a value between 6 and 16. \nTry Again!",
+                                          preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: { _ in })
+            alert.addAction(alertAction)
+            self.present(alert, animated: true)
+
+            return false
+        }
     }
 
     // MARK: - ChessViewModelTextfieldDelegate Delegate
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String, cellModelIdentifier: String) -> Bool {
-//        if cellModelIdentifier == "USERNAME_TYPE_CELL" {
-//            let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-//            selectionData.email = newString
-//            return true
-//        }
-//
-//        if cellModelIdentifier == "PASSWORD_TYPE_CELL" {
-//            let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-//            selectionData.password = newString
-//            return true
-//        }
+        if cellModelIdentifier == "WELCOME_CELL" {
+            let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+            if let sizeInput = Int(newString) {
+                chessModel?.size = sizeInput
+            } else {
+                chessModel?.size = 0
+            }
 
-        return false
+            return true
+        }
+
+        return true
     }
 
     func textFieldDidEndEditing(_ textField: UITextField, cellModelIdentifier: String) {
         if cellModelIdentifier == "WELCOME_CELL" {
-//            selectionData.email = textField.text
-        }
-
-        if cellModelIdentifier == "WELCOME_CELL" {
-//            selectionData.password = textField.text
+            if let sizeInput = Int(textField.text ?? "") {
+                chessModel?.size = sizeInput
+            } else {
+                chessModel?.size = 0
+            }
         }
     }
 }

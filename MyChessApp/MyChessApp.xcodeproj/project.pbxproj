@@ -10,6 +10,8 @@
 		7753EF6B250E989100CF1E65 /* ChessCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7753EF69250E989100CF1E65 /* ChessCollectionViewController.swift */; };
 		7753EF6C250E989100CF1E65 /* ChessCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753EF6A250E989100CF1E65 /* ChessCollectionViewController.xib */; };
 		776154F0250F821500DFC618 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776154EF250F821500DFC618 /* WelcomeVC.swift */; };
+		776C07C7250FD3F900998AB7 /* ChessServiveImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C07C6250FD3F900998AB7 /* ChessServiveImpl.swift */; };
+		776C07C9250FD7A600998AB7 /* ChessDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776C07C8250FD7A600998AB7 /* ChessDataModels.swift */; };
 		776DB28D250E371A001F67B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776DB28C250E371A001F67B2 /* AppDelegate.swift */; };
 		776DB296250E371D001F67B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776DB295250E371D001F67B2 /* Assets.xcassets */; };
 		776DB299250E371D001F67B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776DB297250E371D001F67B2 /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 		7753EF69250E989100CF1E65 /* ChessCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessCollectionViewController.swift; sourceTree = "<group>"; };
 		7753EF6A250E989100CF1E65 /* ChessCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChessCollectionViewController.xib; sourceTree = "<group>"; };
 		776154EF250F821500DFC618 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		776C07C6250FD3F900998AB7 /* ChessServiveImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessServiveImpl.swift; sourceTree = "<group>"; };
+		776C07C8250FD7A600998AB7 /* ChessDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessDataModels.swift; sourceTree = "<group>"; };
 		776DB289250E371A001F67B2 /* MyChessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		776DB28C250E371A001F67B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		776DB295250E371D001F67B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 			path = WelcomeVC;
 			sourceTree = "<group>";
 		};
+		776C07C3250FCE2700998AB7 /* ChessService */ = {
+			isa = PBXGroup;
+			children = (
+				776C07C6250FD3F900998AB7 /* ChessServiveImpl.swift */,
+				776C07C8250FD7A600998AB7 /* ChessDataModels.swift */,
+			);
+			path = ChessService;
+			sourceTree = "<group>";
+		};
 		776DB280250E371A001F67B2 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 				776DB295250E371D001F67B2 /* Assets.xcassets */,
 				776DB297250E371D001F67B2 /* LaunchScreen.storyboard */,
 				776DB29A250E371D001F67B2 /* Info.plist */,
+				776C07C3250FCE2700998AB7 /* ChessService */,
 				7753EF68250E971D00CF1E65 /* Controllers */,
 				776DB2B3250E810A001F67B2 /* Cells */,
 			);
@@ -289,8 +303,10 @@
 				779E6681250F70DC00EE6675 /* WelcomeCell.swift in Sources */,
 				776DB2B0250E7F02001F67B2 /* ChessTableViewController.swift in Sources */,
 				779E667E250E9D0E00EE6675 /* ChessCollectionViewCell.swift in Sources */,
+				776C07C7250FD3F900998AB7 /* ChessServiveImpl.swift in Sources */,
 				776DB2B5250E8143001F67B2 /* ChessTableViewCell.swift in Sources */,
 				7753EF6B250E989100CF1E65 /* ChessCollectionViewController.swift in Sources */,
+				776C07C9250FD7A600998AB7 /* ChessDataModels.swift in Sources */,
 				776DB2B7250E8189001F67B2 /* ChessTableViewCellModel.swift in Sources */,
 				776154F0250F821500DFC618 /* WelcomeVC.swift in Sources */,
 				779E6686250F714F00EE6675 /* WelcomeCellModel.swift in Sources */,
