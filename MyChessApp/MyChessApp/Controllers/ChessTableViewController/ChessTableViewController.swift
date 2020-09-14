@@ -33,11 +33,6 @@ class ChessTableViewController: UIViewController {
     func setupNavigationBar() {
         self.navigationController?.navigationBar.tintColor = UIColor.orange
         self.navigationItem.title = String(describing: type(of: self))
-
-        //            navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(named: ""),
-        //                                                                style: .plain,
-        //                                                                target: self,
-        //                                                                action: #selector())
     }
 
     func updateTableViewData() {

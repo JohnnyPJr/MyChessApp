@@ -12,12 +12,12 @@ public class ChessModel {
     var size: Int?
     var sourcePosition: Node?
     var destinationPosition: Node?
-    var results: [ChessPathsResultData]?
+    var results: [ChessPathsResultModel]?
 
     convenience init(size: Int?,
                      sourcePosition: Node?,
                      destinationPosition: Node?,
-                     results: [ChessPathsResultData]?) {
+                     results: [ChessPathsResultModel]?) {
         self.init()
         self.size = size
         self.sourcePosition = sourcePosition
@@ -26,7 +26,7 @@ public class ChessModel {
     }
 }
 
-public struct ChessPathsResultData {
+public struct ChessPathsResultModel {
 
     var pathNumber: Int
     var availablePaths: Node?

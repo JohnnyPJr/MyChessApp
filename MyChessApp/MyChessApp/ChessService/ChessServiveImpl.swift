@@ -30,7 +30,7 @@ public protocol ChessService {
     func getTextColorForCell(at indexPath: IndexPath) -> UIColor
 
     /// Validates the data
-    func validateData() -> [ChessPathsResultData]?
+    func validateData() -> [ChessPathsResultModel]?
 
     /// updates the data
     func updateData(data: ChessModel)
@@ -44,7 +44,7 @@ public protocol ChessService {
     /// - Returns: the colour
     func getAvailablePaths(startingNode src: Node,
                            destinationNode dest: Node,
-                           sizeOfChess size: Int) -> [ChessPathsResultData]
+                           sizeOfChess size: Int) -> [ChessPathsResultModel]
 }
 
 public class ChessServiceImpl: NSObject, ChessService {
@@ -125,7 +125,7 @@ public class ChessServiceImpl: NSObject, ChessService {
         return color
     }
 
-    public func validateData() -> [ChessPathsResultData]? {
+    public func validateData() -> [ChessPathsResultModel]? {
 
         let results = getAvailablePaths(startingNode: data.sourcePosition!,
                                                      destinationNode: data.destinationPosition!,
@@ -136,14 +136,14 @@ public class ChessServiceImpl: NSObject, ChessService {
         return nil
     }
 
-    public func getAvailablePaths(startingNode src: Node, destinationNode dest: Node, sizeOfChess size: Int) -> [ChessPathsResultData] {
+    public func getAvailablePaths(startingNode src: Node, destinationNode dest: Node, sizeOfChess size: Int) -> [ChessPathsResultModel] {
 
 
         var minimumPath: Int = 10
         let results = bfs(src: src,
                           dest: dest,
                           sizeOfChess: size)
-        var tempArray:[ChessPathsResultData] = []
+        var tempArray:[ChessPathsResultModel] = []
         for aPath in results {
             let distance = aPath.availablePaths?.distance ?? 10
             if distance <= minimumPath {
@@ -160,9 +160,9 @@ public class ChessServiceImpl: NSObject, ChessService {
     /// - src: the initial Cell exrpresesed as a node
     ///   - dest: the destination Cell exrpresesed as a node
     ///   - sizeOfChess: the size of the chess
-      fileprivate func bfs(src: Node, dest: Node, sizeOfChess: Int) -> [ChessPathsResultData] {
+      fileprivate func bfs(src: Node, dest: Node, sizeOfChess: Int) -> [ChessPathsResultModel] {
 
-          var arrayOfResults: [ChessPathsResultData] = []
+          var arrayOfResults: [ChessPathsResultModel] = []
 
           // map to check if matrix cell is visited before or not
           var visited = [Node: Bool]()
@@ -185,7 +185,7 @@ public class ChessServiceImpl: NSObject, ChessService {
               // If destination is reached, return distance
               if (x == dest.x && y == dest.y) {
 
-                  let resultData = ChessPathsResultData.init(pathNumber: dist,
+                  let resultData = ChessPathsResultModel.init(pathNumber: dist,
                                                              availablePaths: node,
                                                              theDescription: "",
                                                              allIndexpaths: [])
