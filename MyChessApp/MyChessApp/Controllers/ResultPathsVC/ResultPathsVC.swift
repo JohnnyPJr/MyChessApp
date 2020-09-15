@@ -24,7 +24,7 @@ class ResultPathsVC: ChessTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if results?.count ?? 0 > 1 {
+        if results?.count ?? 0 > 0 {
             setupNavigationBar()
             updateCellViewModels()
         } else {
