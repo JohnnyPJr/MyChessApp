@@ -42,9 +42,9 @@ public struct ChessPathsResultModel {
         let x = availablePaths?.x ?? 0
         let y = availablePaths?.y ?? 0
         if theDescription.isEmpty {
-            theDescription = String(y) + ":" + String(x)
+            theDescription = String(y+1) + "-" + (Int(x+1).associatedCharacter ?? "")
         } else {
-            theDescription = theDescription  + " <- " + String(y) + ":" + String(x)
+            theDescription = theDescription  + " <- " + String(y+1) + "-" + (Int(x+1).associatedCharacter ?? "")
         }
         if let allPaths = availablePaths?.previousNodes {
             for node in allPaths {

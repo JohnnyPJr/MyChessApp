@@ -10,6 +10,8 @@ import UIKit
 
 class ResultPathCellModel: ChessTableViewCellModel {
 
+    var model: ChessPathsResultModel?
+
     override init() {
         super.init()
         defaultHeightConstant = 66
@@ -17,6 +19,7 @@ class ResultPathCellModel: ChessTableViewCellModel {
 
     convenience init(_ resultModel: ChessPathsResultModel) {
         self.init()
+        self.model = resultModel
     }
     override func nibName() -> String {
         return "ResultPathCell"
@@ -30,5 +33,7 @@ class ResultPathCellModel: ChessTableViewCellModel {
         guard let view = cell as? ResultPathCell else {
             return
         }
+
+        view.resultPathLabel?.text = model?.getInfo(availablePaths: model?.availablePaths)
     }
 }

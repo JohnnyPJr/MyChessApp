@@ -80,6 +80,9 @@ class ChessCollectionViewController: UIViewController {
     }
 
     @IBAction func viewPathsPressed(_ sender: Any) {
+        let vc = ResultPathsVC.init(results: data.results ?? [])
+        self.navigationController?.pushViewController(vc, animated: false)
+
     }
 
     @IBAction func resetButtonPressed(_ sender: Any) {
