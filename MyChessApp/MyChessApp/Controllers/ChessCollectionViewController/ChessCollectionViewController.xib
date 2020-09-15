@@ -34,7 +34,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkh-Ud-Ay4">
-                    <rect key="frame" x="20" y="136" width="374" height="71"/>
+                    <rect key="frame" x="20" y="89" width="374" height="118"/>
                     <attributedString key="attributedText">
                         <fragment content="Pick a starting position and then a destination:">
                             <attributes>
@@ -46,14 +46,21 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-Tz-5bF">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QjB-Tz-5bF">
                     <rect key="frame" x="20" y="722" width="374" height="45"/>
                     <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="XAa-aL-PWr"/>
                     </constraints>
-                    <state key="normal" title="View Path List">
-                        <color key="titleColor" red="0.89154374869999997" green="0.89154374869999997" blue="0.89154374869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="View Path List">
+                                <attributes>
+                                    <color key="NSColor" red="0.89154374869999997" green="0.89154374869999997" blue="0.89154374869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                     </state>
                     <connections>
                         <action selector="viewPathsPressed:" destination="-1" eventType="touchUpInside" id="KKx-zf-R0f"/>
@@ -84,7 +91,7 @@
                 <constraint firstItem="Pfx-jB-UXi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="2" id="UHl-E3-I55"/>
                 <constraint firstItem="QjB-Tz-5bF" firstAttribute="top" secondItem="Pfx-jB-UXi" secondAttribute="bottom" constant="62" id="WcM-sO-ku2"/>
                 <constraint firstItem="jkh-Ud-Ay4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="X9k-YM-cLe"/>
-                <constraint firstItem="jkh-Ud-Ay4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="92" id="hcQ-Rs-Mki"/>
+                <constraint firstItem="jkh-Ud-Ay4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="hcQ-Rs-Mki"/>
                 <constraint firstItem="Pfx-jB-UXi" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="njQ-iI-30E"/>
                 <constraint firstItem="SFh-oW-vNh" firstAttribute="top" secondItem="QjB-Tz-5bF" secondAttribute="bottom" constant="20" id="oou-jt-0zy"/>
                 <constraint firstItem="QjB-Tz-5bF" firstAttribute="centerX" secondItem="SFh-oW-vNh" secondAttribute="centerX" id="v1N-8h-vYa"/>

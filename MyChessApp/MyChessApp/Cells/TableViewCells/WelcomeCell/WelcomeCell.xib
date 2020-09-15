@@ -45,15 +45,22 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h95-e4-NfM">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h95-e4-NfM">
                         <rect key="frame" x="140.5" y="377" width="133" height="30"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="D5X-kb-ROn"/>
                             <constraint firstAttribute="width" constant="133" id="t0U-6k-Kh8"/>
                         </constraints>
-                        <state key="normal" title="Let's Go">
-                            <color key="titleColor" red="0.89154374869999997" green="0.89154374869999997" blue="0.89154374869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal">
+                            <attributedString key="attributedTitle">
+                                <fragment content="Let's Go">
+                                    <attributes>
+                                        <color key="NSColor" red="0.89154374869999997" green="0.89154374869999997" blue="0.89154374869999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                         </state>
                     </button>
                 </subviews>
