@@ -93,10 +93,9 @@ public struct Node {
 extension Node: Hashable {
 
     // Using Node struct as a key we need conform to Hashable
-    public var hashValue: Int {
-        return "\(self.x)\(self.y)".hashValue
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine("\(self.x)\(self.y)")
     }
-
     public static func ==(lhs: Node, rhs: Node) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }

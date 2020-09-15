@@ -29,22 +29,16 @@ public protocol ChessService {
     /// - Returns: the colour
     func getTextColorForCell(at indexPath: IndexPath) -> UIColor
 
-    /// Validates the data
-    func validateData() -> [ChessPathsResultModel]?
-
-    /// updates the data
-    func updateData(data: ChessModel)
-
-    /// Called to return All Paths for selected Nodes
+    /// Called to validate that the current selections have paths
     ///
     /// - Parameters:
-    ///   - startingNode: The indexpath of the cell
-    ///   - destinationNode: The indexpath of the cell
-    ///   - sizeOfChess: The indexpath of the cell
-    /// - Returns: the colour
-    func getAvailablePaths(startingNode src: Node,
-                           destinationNode dest: Node,
-                           sizeOfChess size: Int) -> [ChessPathsResultModel]
+    func validateData() -> [ChessPathsResultModel]?
+
+    /// Called to update the data accordingly with the User inputs
+    ///
+    /// - Parameters:
+    ///   - data: The chess model data
+    func updateData(data: ChessModel)
 }
 
 public class ChessServiceImpl: NSObject, ChessService {
@@ -136,7 +130,14 @@ public class ChessServiceImpl: NSObject, ChessService {
         return nil
     }
 
-    public func getAvailablePaths(startingNode src: Node, destinationNode dest: Node, sizeOfChess size: Int) -> [ChessPathsResultModel] {
+    /// Called to return All Paths for selected Nodes
+    ///
+    /// - Parameters:
+    ///   - startingNode: The indexpath of the cell
+    ///   - destinationNode: The indexpath of the cell
+    ///   - sizeOfChess: The indexpath of the cell
+    /// - Returns: the colour
+    private func getAvailablePaths(startingNode src: Node, destinationNode dest: Node, sizeOfChess size: Int) -> [ChessPathsResultModel] {
 
 
         var minimumPath: Int = 10
