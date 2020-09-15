@@ -85,16 +85,16 @@ public class ChessServiceImpl: NSObject, ChessService {
 
         for index in getAllIndexPaths() {
             if index.row == indexPath.row && index.section == indexPath.section {
-                color = .yellow
+                color = .cyan
             }
         }
 
         if data.sourcePosition?.x == indexPath.row &&
             data.sourcePosition?.y == indexPath.section {
-            color = .green
+            color = .magenta
         } else if data.destinationPosition?.x == indexPath.row &&
             data.destinationPosition?.y == indexPath.section {
-            color = .green
+            color = .magenta
         }
         return color
     }

@@ -29,6 +29,7 @@ class ChessCollectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewPathsButton.layer.cornerRadius = 16.0
         viewPathsButton.isHidden = true
         resetButton.isHidden = true
         setupCollectionView()

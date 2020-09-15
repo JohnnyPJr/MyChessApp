@@ -11,5 +11,11 @@ import UIKit
 class WelcomeCell: ChessTableViewCell {
     @IBOutlet weak var chessTextfield: UITextField!
     @IBOutlet weak var doneButton: UIButton!
-    
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        doneButton.layer.cornerRadius = 16.0
+    }
+
 }
